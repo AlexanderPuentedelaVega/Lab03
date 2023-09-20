@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio5</title>
+    <script>
+        function Cotizar() {
+            let monto = parseInt(document.getElementById("monto").value);
+            let opciones = document.getElementsByName("eleccion");
+            let dolar = 3.71
+            let euro = 3.96
+                if (opciones[0].checked) {
+                    let rpta = monto/dolar
+                    alert("Su monto en dolares es "+ rpta)
+                }
+                if (opciones[1].checked) {
+                    let rpta = monto/euro
+                    alert("Su monto en euros es "+ rpta)
+                }
+        }
+    </script>
+</head>
+<body>
+    <h2>CASA DE CAMBIO</h2>
+    <p>Seleccionar moneda a enviar: </p>
+    <input type="radio" name="eleccion" value="dolar" checked >Dolar
+    <input type="radio" name="eleccion" value="euro" >Euro <br/>
+    <p>Ingrese monto:</p>
+    <input type="text" id="monto" /></br>
+    <button type="button" onclick="Cotizar()">Corizar</button>
+</body>
+</html>
